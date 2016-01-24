@@ -1,0 +1,5 @@
+<%- if @topbeat_config['input']['period'] -%>
+<%- @topbeat_config['input']['period'] = Integer(@topbeat_config['input']['period']) -%>
+<%- end -%>
+### Topbeat configuration managed by Puppet ###
+<%= @topbeat_config.to_yaml() %>
